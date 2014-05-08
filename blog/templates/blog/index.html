@@ -1,0 +1,40 @@
+{% extends 'blog_base.html' %}
+{% block title %}首页{% endblock %}
+
+
+
+
+{% block article_content %}
+<main class="main">
+  <div class="main__content posts">
+    <div class="wrapper">
+      <ul class="posts__list">
+        {% for blog in blog_list %}
+        <li>
+          <a href="{{ blog.get_absolute_url }}">
+            <h2 class="posts__title">{{ blog.title }}</h2>
+            <span class="posts__date">{{ blog.pub_date|date:'Y-m-d' }}</span>
+          </a>
+        </li>
+        {% endfor %}
+        </ul>
+          </div>
+          <div class="pagination">
+            <div class="wrapper">
+
+                  <span class="pagination--previous">
+                    <i class="fa fa-angle-double-left"></i>
+                    Previous
+                  </span>
+
+
+                  <a href="/page2" class="pagination--next">
+                    Next
+                    <i class="fa fa-angle-double-right"></i>
+                  </a>
+
+            </div>
+          </div>
+        </div>
+</main>
+{% endblock %}
