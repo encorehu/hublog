@@ -10,6 +10,8 @@ setup(
     description='a django blog',
     url='https://github.com/encorehu/hublog',
     packages=find_packages(),
+    package_dir={'hublog':'blog'},
+    package_data={'hublog':['*.*','templates/blog/*.*']},
     zip_safe = False,
     include_package_data=True,
     classifiers=[
