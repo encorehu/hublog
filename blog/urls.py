@@ -16,6 +16,6 @@ from django.views.generic import DetailView, ListView
 
 urlpatterns = patterns('',
 
-    #url(r'^$',     'hublog.views.index',name='hublog_index'),
+    url(r'^$',     'hublog.views.index',name='hublog_index'),
 
 )
