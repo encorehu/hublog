@@ -11,7 +11,10 @@ setup(
     url='https://github.com/encorehu/hublog',
     packages=find_packages(),
     package_dir={'hublog':'blog'},
-    package_data={'hublog':['*.*','templates/blog/*.*']},
+    package_data={'blog':['*.*',
+        'templates/*.*',
+        'templates/blog/*.*',
+        ]},
     zip_safe = False,
     include_package_data=True,
     classifiers=[
